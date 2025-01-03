@@ -1,40 +1,44 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>sud.learn</groupId>
-  <artifactId>SpringWebXMLMaven</artifactId>
-  <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>SpringWebXMLMaven Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  <dependencies>
-  
-  	<!-- spring-webmvc -->
-	<dependency>
-	    <groupId>org.springframework</groupId>
-	    <artifactId>spring-webmvc</artifactId>
-	    <version>6.2.1</version>
-	</dependency>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>sud.learn</groupId>
+	<artifactId>SpringWebXMLMaven</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>SpringWebXMLMaven Maven Webapp</name>
+	<url>http://maven.apache.org</url>
 
-	<dependency>
-	    <groupId>jakarta.servlet</groupId>
-	    <artifactId>jakarta.servlet-api</artifactId>
-	    <version>6.0.0</version>
-	    <scope>provided</scope>
-	</dependency>
+	<!--spring boot parent will manage other dependencies -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.4.1</version>
+	</parent>
 
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-  <build>
-    <finalName>SpringWebXMLMaven</finalName>
-  </build>
-   <properties>
-    <maven.compiler.source>17</maven.compiler.source>
-    <maven.compiler.target>17</maven.compiler.target>
-  </properties>
+	<dependencies>
+
+		<!-- spring-boot-starter-web to replace servlet and spring-webmvc -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+		<!-- tomcat-embed-jasper to run JSP files -->
+		<dependency>
+		    <groupId>org.apache.tomcat.embed</groupId>
+		    <artifactId>tomcat-embed-jasper</artifactId>
+		</dependency>
+
+	</dependencies>
+	
+	<build>
+		<finalName>SpringWebXMLMaven</finalName>
+	</build>
+	
+	<properties>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+	</properties>
+	
 </project>
