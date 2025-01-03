@@ -1,3 +1,25 @@
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+
+### Java ### 
+*.class
+*.log
+*.ctxt
+
 # Package Files #
 *.jar
 *.war
@@ -7,15 +29,9 @@
 *.tar.gz
 *.rar
 
-### Java ### 
-.project
-.settings
-.classpath
-.metadata
-*.class
-*.log
 
 ### Eclipse ###
+.classpath
 .metadata
 bin/
 tmp/
@@ -28,15 +44,40 @@ local.properties
 .loadpath
 .recommenders
 
+# Uncomment this line if you wish to ignore the project description file.
+# Typically, this file would be tracked if it contains build/dependency configurations:
+#.project
+
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Spring Boot Tooling
+.sts4-cache
+
 # Java annotation processor (APT)
 .factorypath
 .apt_generated/
 .apt_generated_test/
 
 
-# STS (Spring Tool Suite)
-.springBeans
+
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
 
 
-# Spring Boot Tooling
-.sts4-cache
+
+
+
+
+
